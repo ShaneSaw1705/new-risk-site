@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Gift, Calendar, Users, ChevronRight } from 'lucide-react'
 import { handleSubscribe } from '@/hooks/newsletter'
+import { DonateButton } from '@/components/donate'
 
 export default function LandingPage() {
 	return (
@@ -26,13 +27,11 @@ export default function LandingPage() {
 			</header>
 
 			<main className="flex-grow">
-				<section className="bg-muted py-20">
+				<section className="bg-hero-pattern bg-cover bg-no-repeat bg-center py-20">
 					<div className="container mx-auto text-center">
-						<h1 className="text-4xl md:text-6xl font-bold mb-6">Riders Supporting Kids</h1>
-						<p className="text-xl mb-8 max-w-2xl mx-auto">Empowering less fortunate children through community events and toy donations.</p>
-						<Button size="lg" asChild>
-							<Link href="#donate">Donate Now</Link>
-						</Button>
+						<h1 className='text-6xl font-bold mb-6 [text-shadow:_0_0_15px_rgb(0_0_0_/_90%)]'>Riders Supporting Kids</h1>
+						<p className="text-xl mb-8 max-w-2xl mx-auto [text-shadow:_0_0_15px_rgb(0_0_0_/_90%)]">Empowering less fortunate children through community events and toy donations.</p>
+						<DonateButton />
 					</div>
 				</section>
 
@@ -107,7 +106,8 @@ export default function LandingPage() {
 					<div className="container mx-auto text-center">
 						<h2 className="text-3xl font-bold mb-4">Make a Difference Today</h2>
 						<p className="mb-8 max-w-2xl mx-auto">Your donation helps us continue our mission of supporting less fortunate children in our community.</p>
-						<Button size="lg">Donate Now</Button>
+						<DonateButton />
+
 					</div>
 				</section>
 			</main>
